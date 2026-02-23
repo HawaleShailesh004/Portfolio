@@ -454,10 +454,12 @@ section {
 }
 
 .st .fc {
+  font-family: var(--fm);
   color: var(--cyan)
 }
 
 .st .fa {
+  font-family: var(--fm);
   color: var(--amber)
 }
 
