@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shailesh Hawale - Full Stack Engineer | MERN, AI &amp; Backend</title>
+  <meta name="description" content="Full Stack Engineer from Mumbai. MERN stack, AI integration (LLaMA-70B, Groq), backend systems. 2 internships, competition winner. Open to SDE-1 roles." />
+  <meta name="author" content="Shailesh Hawale" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0a0a0f" />
+
+  <!-- Canonical: replace with your live URL e.g. https://shaileshhawale.vercel.app -->
+  <link rel="canonical" href="https://shailesh-hawale-portfolio.vercel.app/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Shailesh Hawale - Full Stack Engineer" />
+  <meta property="og:description" content="Full Stack Engineer from Mumbai. MERN, AI integration, backend systems. Open to SDE-1 roles." />
+  <meta property="og:url" content="https://shailesh-hawale-portfolio.vercel.app/" />
+  <meta property="og:image" content="https://shailesh-hawale-portfolio.vercel.app/public/shailesh_hawale.jpeg" />
+  <meta property="og:image:alt" content="Shailesh Hawale - Full Stack Engineer" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:site_name" content="Shailesh Hawale Portfolio" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shailesh Hawale - Full Stack Engineer" />
+  <meta name="twitter:description" content="Full Stack Engineer from Mumbai. MERN, AI integration, backend. Open to SDE-1 roles." />
+  <meta name="twitter:image" content="https://shailesh-hawale-portfolio.vercel.app/public/shailesh_hawale.jpeg" />
+  <meta name="twitter:image:alt" content="Shailesh Hawale - Full Stack Engineer" />
+
+  <link rel="icon" sizes="32x32" href="../public/shailesh-icon.png">
+  <link rel="icon" sizes="16x16" href="../public/shailesh-icon.png">
+  <link rel="apple-touch-icon" href="../public/shailesh-icon.png">
+  <link rel="icon" href="../public/favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- JSON-LD: Person / Profile for rich results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shailesh Hawale",
+    "url": "https://shailesh-hawale-portfolio.vercel.app/",
+    "image": "https://shaileshhawale.vercel.app/public/shailesh_hawale.jpeg",
+    "jobTitle": "Full Stack Engineer",
+    "email": "dev.shaileshhawale@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Mumbai", "addressCountry": "IN" },
+    "sameAs": [
+      "https://github.com/HawaleShailesh004",
+      "https://linkedin.com/in/shailesh-hawale"
+    ],
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Shivajirao S. Jondhale College of Engineering" },
+      { "@type": "EducationalOrganization", "name": "VPM's Polytechnic, Thane" }
+    ],
+    "knowsAbout": ["MERN Stack", "Node.js", "React", "MongoDB", "PostgreSQL", "AI Integration", "LLM APIs", "TypeScript", "REST APIs"]
+  }
+  </script>
+</head>
+
+<body class="loading">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cd"></div>
+  <div id="cr"></div>
+  <div class="dg"></div>
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="lt"><span class="pr">shailesh@portfolio:~$</span><span id="lt"></span><span class="lc"></span></div>
+    <div class="lbw">
+      <div class="lb" id="lb"></div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav id="nav" aria-label="Main navigation">
+    <div class="ni">
+      <a href="#hero" class="logo">SH</a>
+      <ul class="nl">
+        <li><a href="#about">about</a></li>
+        <li><a href="#experience">work</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#education">education</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+      <a href="https://mail.google.com/mail/?view=cm&to=dev.shaileshhawale@gmail.com&su=Opportunity%20from%20your%20portfolio&body=Hi%20Shailesh%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect.%0A%0A%5BYour%20message%5D"
+        target="_blank" rel="noopener noreferrer" class="nh">hire me →</a>
+      <button class="hb" id="hb"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mm" id="mm">
+    <button class="mc" id="mc">✕</button>
+    <a href="#about" class="ml">about</a>
+    <a href="#experience" class="ml">work</a>
+    <a href="#projects" class="ml">projects</a>
+    <a href="#skills" class="ml">skills</a>
+    <a href="#education" class="ml">education</a>
+    <a href="#contact" class="ml">contact</a>
+  </div>
+
+  <main id="main-content">
+  <!-- ══ HERO ══ -->
+  <section id="hero" aria-label="Introduction">
+    <h1 class="visually-hidden">Shailesh Hawale – Full Stack Engineer, Mumbai. MERN, AI integration, backend. Open to SDE-1 roles.</h1>
+    <div class="c">
+      <div class="hi">
+        <div>
+          <div class="ha"><span class="ad"></span>Available for SDE-1 Roles</div>
+          <div class="hnw"><span class="hn l1" aria-hidden="true">SHAILESH<span class="ac">.</span></span></div>
+          <div class="hnw"><span class="hn l2" aria-hidden="true">HAWALE</span></div>
+          <div class="hsw">
+            <p class="hs"><strong>Full Stack Engineer</strong> - <span class="tw" id="tw"></span><span
+                class="twc"></span></p>
+          </div>
+          <div class="hps">
+            <div class="hp"><span>⌖</span>Mumbai, India</div>
+            <div class="hp"><span>◎</span>B.E. IT · 2026</div>
+            <div class="hp"><span>✦</span>2 Internships</div>
+            <div class="hp"><span><i class="fa-solid fa-trophy" style="color:var(--amber)"></i></span>Competition Winner
+            </div>
+          </div>
+          <div class="hct">
+            <a href="#projects" class="bp">view my work ↓</a>
+            <a href="#contact" class="bg2">get in touch</a>
+            <a href="../public/shailesh_hawale_resume.pdf" target="_blank" rel="noopener" class="br">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>resume
+            </a>
+          </div>
+          <div class="hsl">
+            <a href="https://github.com/HawaleShailesh004" target="_blank">github</a>
+            <span style="color:var(--t3)">·</span>
+            <a href="https://linkedin.com/in/shailesh-hawale" target="_blank">linkedin</a>
+          </div>
+        </div>
+
+        <!-- Terminal + Photo Reveal -->
+        <div class="hr">
+          <div class="hpt">
+            <div class="tc inner">
+              <div class="th">
+                <div class="td tdr"></div>
+                <div class="td tdy"></div>
+                <div class="td tdg"></div>
+                <div class="tt">whoami.sh</div>
+              </div>
+              <div class="tb">
+                <div><span class="tp">→</span> <span class="tcmd">whoami</span></div>
+                <div class="to thi">shailesh_hawale</div>
+                <div><span class="tp">→</span> <span class="tcmd">cat role.txt</span></div>
+                <div class="to">full_stack_engineer</div>
+                <div><span class="tp">→</span> <span class="tcmd">cat stack.json</span></div>
+                <div class="to">MERN + AI Integration</div>
+                <div><span class="tp">→</span> <span class="tcmd">git log --count</span></div>
+                <div class="to"><span class="tg">2 production internships</span></div>
+                <div><span class="tp">→</span> <span class="tcmd">./reveal_identity.sh</span></div>
+                <div class="to"><span class="tg">█</span> hover to reveal <span class="tcu"></span></div>
+              </div>
+            </div>
+            <!-- Photo revealed on hover - your photo from assets folder -->
+            <div class="hpo">
+              <img src="../public/shailesh_hawale.jpeg" alt="Shailesh Hawale" onerror="this.style.display='none'" />
+            </div>
+            <div class="pl">identity_revealed.jpg</div>
+            <div class="hh">hover to reveal →</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="si">
+      <div class="sil"></div><span class="sit">scroll</span>
+    </div>
+  </section>
+
+  <!-- ══ ABOUT ══ -->
+  <section id="about">
+    <div class="c">
+      <div class="sl">01 - about</div>
+      <h2 class="st">about<span class="fc">_me</span><span class="fa">();</span></h2>
+      <div class="ag">
+        <div>
+          <div class="at rv">
+            <p>I'm a <strong>Full Stack Engineer from Mumbai</strong> who builds things that actually ship.</p>
+            <p>Two internships. Two deployed products. One competition win. Currently in my final year of <span
+                class="am">B.E. in Information Technology</span>.</p>
+            <p>I specialize in <span class="cy">MERN stack systems</span> with a backend-first mindset - what excites me
+              most is the intersection of practical backend engineering and <strong>AI integration</strong>.</p>
+            <p>I've built a parsing system converting unstructured university PDFs into structured data via <span
+                class="cy">LLaMA-70B</span>. I've designed <strong>MongoDB indexing strategies</strong> that cut
+              retrieval from 45s to under 50ms. I don't use AI as a buzzword - I ship it.</p>
+          </div>
+          <div class="atg rv"><span class="lb">target →</span>SDE-1 · Full Stack · Backend Engineering<br><span
+              class="lb">location →</span>Mumbai · Open to remote</div>
+        </div>
+
+        <div class="rr">
+          <div class="tl">
+            <div class="tli">
+              <div class="tld"></div>
+              <div class="tlc">
+                <div class="tly">2020</div>
+                <div class="tle">Diploma in Computer Engineering</div>
+                <div class="tls">VPM's Polytechnic, Thane</div>
+              </div>
+            </div>
+            <div class="tli">
+              <div class="tld"></div>
+              <div class="tlc">
+                <div class="tly">MAY 2023</div>
+                <div class="tle">Diploma Completed <span class="tlsc">81%</span></div>
+                <div class="tls">Strong CS foundation built</div>
+              </div>
+            </div>
+            <div class="tli">
+              <div class="tld"></div>
+              <div class="tlc">
+                <div class="tly">AUG 2023</div>
+                <div class="tle">B.E. in Information Technology</div>
+                <div class="tls">Jondhale College of Engineering</div>
+              </div>
+            </div>
+            <div class="tli">
+              <div class="tld active"></div>
+              <div class="tlc">
+                <div class="tly">FEB 2025</div>
+                <div class="tle"><i class="fa-solid fa-trophy" style="color:var(--amber)"></i> StylePredict - 1st Prize
+                </div>
+                <div class="tls">Among 11 teams · college competition</div>
+              </div>
+            </div>
+            <div class="tli">
+              <div class="tld active"></div>
+              <div class="tlc">
+                <div class="tly">SEP 2025</div>
+                <div class="tle">MERN Intern @ Fascave IT</div>
+                <div class="tls">Still active · COD module, PDF engine</div>
+              </div>
+            </div>
+            <div class="tli">
+              <div class="tld active"></div>
+              <div class="tlc">
+                <div class="tly">SEP–DEC 2025</div>
+                <div class="tle">Backend Intern @ Raulo Enterprises</div>
+                <div class="tls">3 production systems as sole dev</div>
+              </div>
+            </div>
+            <div class="tli">
+              <div class="tld future blink"></div>
+              <div class="tlc">
+                <div class="tly">JUL 2026</div>
+                <div class="tle">Graduation (Expected)</div>
+                <div class="tls">↓ what's next?</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ EXPERIENCE ══ -->
+  <section id="experience">
+    <div class="c">
+      <div class="sl">02 - work</div>
+      <h2 class="st">experience<span class="fa">.log</span></h2>
+      <div class="ec">
+        <div class="ecd active rv">
+          <div class="eh">
+            <div>
+              <div class="er">MERN Stack Developer Intern</div>
+              <div class="eco">Fascave IT Solutions</div>
+            </div>
+            <div class="em">
+              <div class="ep">Sep 2025 – Present · Part-time · Remote</div>
+              <div class="es active"><span class="sd"></span>ACTIVE</div>
+            </div>
+          </div>
+          <ul class="ebl">
+            <li>Engineered a comprehensive <strong>COD Management Module</strong> (Dashboard + 5 Sub-modules) handling
+              complex UI states, real-time transaction tables, and API integrations.</li>
+            <li>Revamped the PDF engine for <span class="n">500+</span> bulk labels - eliminated UI freezes via async
+              loaders and smart auto-download logic.</li>
+            <li>Solved critical mobile rendering failures via <strong>Blob-based fallback</strong>, ensuring <span
+                class="n">100%</span> seamless PDF access across all devices.</li>
+            <li>Integrated <strong>paginated data fetching</strong> - cut dashboard load times by <span
+                class="n">55%</span>.</li>
+          </ul>
+          <div class="et"><span class="tag">React</span><span class="tag">TypeScript</span><span
+              class="tag">UI/UX</span><span class="tag">Git/GitHub</span><span class="tag">REST APIs</span></div>
+        </div>
+        <div class="ecd done rv">
+          <div class="eh">
+            <div>
+              <div class="er">Backend Engineer Intern</div>
+              <div class="eco">Raulo Enterprises</div>
+            </div>
+            <div class="em">
+              <div class="ep">Sep 2025 – Dec 2025 · Part-time · Remote</div>
+              <div class="es done">COMPLETED</div>
+            </div>
+          </div>
+          <ul class="ebl">
+            <li>Built and deployed <span class="n">3</span> production backend systems as the <strong>sole backend
+                developer</strong> - full ownership from schema to deployment.</li>
+            <li>Designed MongoDB schemas &amp; <span class="n">30+</span> REST API endpoints - improved query speeds by
+              <span class="n">30%</span>.
+            </li>
+            <li>Optimized media pipelines via <strong>Sharp + WebP</strong> - reduced file size <span
+                class="n">60%</span> and upload time <span class="n">40%</span>.</li>
+            <li>Automated email and content workflows - reduced manual client effort by <span class="n">45%</span>.</li>
+          </ul>
+          <div class="et"><span class="tag">Node.js</span><span class="tag">Express.js</span><span
+              class="tag">PostgreSQL</span><span class="tag">MongoDB</span><span class="tag">REST APIs</span><span
+              class="tag">System Design</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PROJECTS ══ -->
+  <section id="projects">
+    <div class="c">
+      <div class="sl">03 - projects</div>
+      <h2 class="st">projects<span class="fc">.showcase</span><span class="fa">()</span></h2>
+
+      <!-- ExamMitra -->
+      <div class="pb">
+        <div class="pc rl">
+          <div class="pn">[ 01 ]</div>
+          <h3 class="ptit">Exam Mitra</h3>
+          <div class="ptag">AI-Powered Exam Preparation Platform</div>
+          <p class="pd">Built for students drowning in PDFs. ExamMitra converts unstructured university exam papers into
+            a searchable, revision-ready knowledge base - from upload to structured data in seconds.</p>
+          <div class="pde">
+            <div class="dec"><strong>LLaMA-70B via Groq API</strong> - question extraction and answer generation, 90%
+              reduction in manual entry.</div>
+            <div class="dec"><strong>MongoDB compound indexing</strong> - retrieval cut from ~45s (live scraping) to
+              &lt;50ms.</div>
+            <div class="dec"><strong>Puppeteer scraper</strong> for muquestionpapers.com - pagination,
+              university/subject/year filters.</div>
+            <div class="dec"><strong>JWT + Railway + Vercel</strong> - split deployment with production-level auth.
+            </div>
+          </div>
+          <div class="ps">
+            <div class="si2"><span class="sn" data-count="90">0</span><span class="sn">%</span><span class="slb">manual
+                data<br>reduction</span></div>
+            <div class="si2"><span class="sn" data-count="10">0</span><span class="sn">+</span><span class="slb">live
+                sources<br>integrated</span></div>
+            <div class="si2"><span class="sn">&lt;50ms</span><span class="slb">retrieval<br>time</span></div>
+          </div>
+          <div class="pls">
+            <a href="https://exam-mitra.vercel.app" target="_blank" class="pla live">↗ live demo</a>
+            <a href="https://github.com/HawaleShailesh004/Exam-Mitra-MERN" target="_blank" class="pla gh">⌥ github</a>
+          </div>
+          <div class="ptt"><span class="tag">MERN</span><span class="tag">LLaMA-70B</span><span class="tag">Groq
+              API</span><span class="tag">Puppeteer</span><span class="tag">JWT</span><span class="tag">MongoDB
+              Indexing</span><span class="tag">Railway</span></div>
+        </div>
+        <div class="pp rr">
+          <div class="bm">
+            <div class="bb">
+              <div class="bd bdr"></div>
+              <div class="bd bdy"></div>
+              <div class="bd bdg"></div>
+              <div class="bu">exam-mitra.vercel.app</div>
+            </div>
+            <div class="pv eb">
+              <div class="pv-inner">
+                <div class="evi">
+                  <div class="evh"><span>ExamMitra Dashboard</span><span style="color:var(--amber)">● 3 papers
+                      loaded</span></div>
+                  <div class="evr">
+                    <div class="evb"><span class="evl">PDF → Questions</span>extracted 47 questions<div class="evp">
+                        <div class="evpf" style="width:90%"></div>
+                      </div>
+                    </div>
+                    <div class="evb"><span class="evl">LLaMA-70B</span><span style="color:#22c55e">● model ready</span>
+                      <div class="evp">
+                        <div class="evpf" style="width:100%;background:var(--amber)"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="evr">
+                    <div class="evb"><span class="evl">Revision Progress</span>Done: 23 · Pending: 18 · Revision: 6<div
+                        class="evp">
+                        <div class="evpf" style="width:60%"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="evr">
+                    <div class="evb" style="font-size:9px;color:var(--t3)"><span class="evl">DB
+                        Indexing</span>retrieval:
+                      <span style="color:var(--cyan)">47ms</span> · prev: ~45,000ms
+                    </div>
+                    <div class="evb" style="font-size:9px"><span class="evl">JWT Auth</span><span
+                        style="color:#22c55e">●
+                        session active</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="pv-img">
+                <img src="../public/project_images/exam_mitra_banner.webp" alt="ExamMitra"
+                  onerror="this.style.display='none'" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- StylePredict -->
+      <div class="pb rev">
+        <div class="pc rr">
+          <div class="pn">[ 02 ]</div>
+          <div class="prz"><i class="fa-solid fa-trophy" style="color:var(--amber)"></i> 1st Prize - College Competition
+            2025</div>
+          <h3 class="ptit">Style Predict</h3>
+          <div class="ptag">ML-Powered Clothing Sales Prediction</div>
+          <p class="pd">Forecasting tool for fashion retail - predicting monthly, quarterly, and yearly revenue across
+            6+ business dimensions including age group, gender, location, and seasonal events.</p>
+          <div class="pde">
+            <div class="dec"><strong>XGBoost model</strong> on 36-month India-based synthetic dataset - 85%+ prediction
+              accuracy across all dimensions.</div>
+            <div class="dec"><strong>Dynamic filter UI</strong> - real-time forecasts on parameter change, no page
+              reload.</div>
+            <div class="dec"><strong>Full EDA pipeline</strong> - Matplotlib + Seaborn + Plotly for interactive visual
+              analysis.</div>
+            <div class="dec"><strong>Deployed on Render</strong> with keep-alive pings for zero cold-start UX.</div>
+          </div>
+          <div class="ps">
+            <div class="si2"><span class="sn" data-count="85">0</span><span class="sn">%+</span><span
+                class="slb">prediction<br>accuracy</span></div>
+            <div class="si2"><span class="sn" data-count="6">0</span><span class="sn">+</span><span
+                class="slb">business<br>dimensions</span></div>
+            <div class="si2"><span class="sn" style="color:var(--amber)"><i class="fa-solid fa-trophy"></i></span><span
+                class="slb">1st prize<br>11
+                teams</span></div>
+          </div>
+          <div class="pls">
+            <a href="https://fashionforecast-h008.onrender.com/" target="_blank" class="pla live"
+              style="background:var(--amber)">↗ live demo</a>
+            <a href="https://github.com/HawaleShailesh004/Style-Predict" target="_blank" class="pla gh">⌥ github</a>
+          </div>
+          <div class="ptt"><span class="tag">Python</span><span class="tag">XGBoost</span><span
+              class="tag">Flask</span><span class="tag">Scikit-learn</span><span class="tag">Pandas</span><span
+              class="tag">Plotly</span><span class="tag">Render</span></div>
+        </div>
+        <div class="pp rl">
+          <div class="bm" style="border-color:rgba(245,158,11,.12)">
+            <div class="bb">
+              <div class="bd bdr"></div>
+              <div class="bd bdy"></div>
+              <div class="bd bdg"></div>
+              <div class="bu">fashionforecast-h008.onrender.com</div>
+            </div>
+            <div class="pv sb">
+              <div class="pv-inner">
+                <div class="svi">
+                  <div class="sva">
+                    <div class="svcl">Monthly Revenue Forecast (₹)</div>
+                    <div class="svbs">
+                      <div class="svb" style="height:40%"></div>
+                      <div class="svb" style="height:60%"></div>
+                      <div class="svb" style="height:45%"></div>
+                      <div class="svb" style="height:80%"></div>
+                      <div class="svb" style="height:55%"></div>
+                      <div class="svb" style="height:95%"></div>
+                      <div class="svb" style="height:70%"></div>
+                      <div class="svb" style="height:48%"></div>
+                      <div class="svb" style="height:85%"></div>
+                      <div class="svb" style="height:90%"></div>
+                    </div>
+                  </div>
+                  <div class="svst">
+                    <div class="svs"><span class="svsn">85%+</span><span class="svsl">Accuracy</span></div>
+                    <div class="svs"><span class="svsn">36mo</span><span class="svsl">Dataset</span></div>
+                    <div class="svs"><span class="svsn">6+</span><span class="svsl">Dimensions</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="pv-img overlay-amber">
+                <img src="../public/project_images/stylepredict_banner.webp" alt="Style Predict"
+                  onerror="this.style.display='none'" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- findItLocal -->
+      <div class="pcs rv">
+        <div>
+          <div class="pcsl">[ 03 ] · other project</div>
+          <div class="pcst">findItLocal</div>
+          <div class="pcstag">Local Services Booking Platform</div>
+          <p class="pcsd">MERN stack platform to find and book local service providers - featuring booking management,
+            service listings, and payment simulation. Full-stack ownership from DB schema to React UI.</p>
+          <div class="pls" style="margin-bottom:0"><a href="https://github.com/HawaleShailesh004/findItLocal"
+              target="_blank" class="pla gh">⌥ github</a></div>
+        </div>
+        <div>
+          <div class="bm">
+            <div class="bb">
+              <div class="bd bdr"></div>
+              <div class="bd bdy"></div>
+              <div class="bd bdg"></div>
+              <div class="bu">findItLocal</div>
+            </div>
+            <div class="pv lb2">
+              <div class="pv-inner">
+                <div class="lvi">
+                  <div class="lvh"><span>findItLocal</span><span style="color:#22c55e">● live</span></div>
+                  <div class="lvc">
+                    <div class="lvcard">
+                      <div class="lvct"><i class="fa-solid fa-wrench" style="color:var(--t2)"></i> Plumber</div>
+                      <div class="lvcs">Thane · ★4.8</div>
+                      <div class="lvcb">Book Now</div>
+                    </div>
+                    <div class="lvcard">
+                      <div class="lvct"><i class="fa-solid fa-bolt" style="color:var(--amber)"></i> Electrician</div>
+                      <div class="lvcs">Mumbai · ★4.6</div>
+                      <div class="lvcb">Book Now</div>
+                    </div>
+                  </div>
+                  <div class="lvbt"><span style="font-size:10px;color:var(--t2)">MongoDB · Express · React ·
+                      Node</span><span class="lvst">● MERN</span></div>
+                </div>
+              </div>
+              <div class="pv-img">
+                <img src="../public/project_images/finditlocal_banner.webp" alt="findItLocal"
+                  onerror="this.style.display='none'" />
+              </div>
+            </div>
+          </div>
+          <div class="ptt" style="margin-top:10px"><span class="tag">MongoDB</span><span class="tag">Express</span><span
+              class="tag">React</span><span class="tag">Node.js</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ SKILLS ══ -->
+  <section id="skills">
+    <div class="c">
+      <div class="sl">04 - skills</div>
+      <h2 class="st">tech_stack<span class="fa">.json</span></h2>
+      <div class="sip rv">
+        <div class="spp"><span class="sic"><i class="fa-brands fa-react" style="color:var(--cyan)"></i></span>React
+        </div>
+        <div class="spp"><span class="sic"><i class="fa-brands fa-node-js" style="color:#22c55e"></i></span>Node.js
+        </div>
+        <div class="spp"><span class="sic"><i class="fa-solid fa-leaf" style="color:#22c55e"></i></span>MongoDB</div>
+        <div class="spp"><span class="sic"><i class="fa-solid fa-database"
+              style="color:var(--cyan)"></i></span>PostgreSQL</div>
+        <div class="spp"><span class="sic"><i class="fa-brands fa-python" style="color:var(--cyan)"></i></span>Python
+        </div>
+        <div class="spp"><span class="sic"><i class="fa-solid fa-code" style="color:var(--cyan)"></i></span>TypeScript
+        </div>
+        <div class="spp"><span class="sic"><i class="fa-solid fa-robot" style="color:var(--cyan)"></i></span>LLM APIs
+        </div>
+        <div class="spp"><span class="sic"><i class="fa-brands fa-docker" style="color:var(--cyan)"></i></span>Docker
+        </div>
+        <div class="spp"><span class="sic"><i class="fa-solid fa-bolt" style="color:var(--amber)"></i></span>Express.js
+        </div>
+        <div class="spp"><span class="sic"><i class="fa-solid fa-palette" style="color:var(--cyan)"></i></span>Tailwind
+        </div>
+      </div>
+      <div class="skj rv">
+        <div class="jeh">
+          <div class="jfd tdr"></div>
+          <div class="jfd tdy"></div>
+          <div class="jfd tdg"></div>
+          <div class="jfn">tech_stack.json</div>
+        </div>
+        <div class="jb">
+          <div>
+            <div class="jl"><span class="jln">1</span><span class="jbr">{</span></div>
+            <div class="jl ji"><span class="jln">2</span><span class="jk">"backend"</span><span class="jco">: [</span>
+            </div>
+            <div class="jl ji" style="padding-left:40px"><span class="jln">3</span><span
+                class="js">"Node.js"</span><span class="jcm">, </span><span class="js">"Express.js"</span><span
+                class="jcm">, </span><span class="js">"REST API Design"</span></div>
+            <div class="jl ji" style="padding-left:40px"><span class="jln">4</span><span class="js">"System
+                Design"</span><span class="jcm">, </span><span class="js">"PostgreSQL"</span><span class="jcm">,
+              </span><span class="js">"MongoDB"</span></div>
+            <div class="jl ji"><span class="jln">5</span><span class="jco">],</span></div>
+            <div class="jl ji"><span class="jln">6</span><span class="jk">"frontend"</span><span class="jco">: [</span>
+            </div>
+            <div class="jl ji" style="padding-left:40px"><span class="jln">7</span><span
+                class="js">"React.js"</span><span class="jcm">, </span><span class="js">"Next.js"</span><span
+                class="jcm">, </span><span class="js">"TypeScript"</span></div>
+            <div class="jl ji" style="padding-left:40px"><span class="jln">8</span><span class="js">"Redux
+                Toolkit"</span><span class="jcm">, </span><span class="js">"Tailwind CSS"</span></div>
+            <div class="jl ji"><span class="jln">9</span><span class="jco">],</span></div>
+            <div class="jl ji"><span class="jln">10</span><span class="jk">"ai_integration"</span><span class="jco">:
+                [</span></div>
+            <div class="jl ji" style="padding-left:40px"><span class="jln">11</span><span class="js">"LLM APIs (Groq,
+                Puter.ai)"</span><span class="jcm">, </span><span class="js">"LLaMA-70B"</span></div>
+            <div class="jl ji" style="padding-left:40px"><span class="jln">12</span><span class="js">"Prompt
+                Engineering"</span><span class="jcm">, </span><span class="js">"OCR Pipelines"</span></div>
+            <div class="jl ji"><span class="jln">13</span><span class="jco">],</span></div>
+          </div>
+          <div>
+            <div class="jl ji"><span class="jln">14</span><span class="jk">"databases"</span><span class="jco">:
+                [</span></div>
+            <div class="jl ji" style="padding-left:40px"><span class="jln">15</span><span
+                class="js">"MongoDB"</span><span class="jcm">, </span><span class="js">"PostgreSQL"</span><span
+                class="jcm">, </span><span class="js">"Redis"</span></div>
+            <div class="jl ji"><span class="jln">16</span><span class="jco">],</span></div>
+            <div class="jl ji"><span class="jln">17</span><span class="jk">"tooling"</span><span class="jco">: [</span>
+            </div>
+            <div class="jl ji" style="padding-left:40px"><span class="jln">18</span><span
+                class="js">"Docker"</span><span class="jcm">, </span><span class="js">"Git/GitHub"</span><span
+                class="jcm">, </span><span class="js">"Puppeteer"</span></div>
+            <div class="jl ji" style="padding-left:40px"><span class="jln">19</span><span
+                class="js">"Postman"</span><span class="jcm">, </span><span class="js">"Vercel"</span><span
+                class="jcm">, </span><span class="js">"Railway"</span><span class="jcm">, </span><span
+                class="js">"Render"</span></div>
+            <div class="jl ji"><span class="jln">20</span><span class="jco">],</span></div>
+            <div class="jl ji"><span class="jln">21</span><span class="jk">"currently_learning"</span><span
+                class="jco">: [</span></div>
+            <div class="jl ji" style="padding-left:40px"><span class="jln">22</span><span class="js le">"Redis
+                (deep)"</span><span class="jcm">, </span><span class="js le">"System Design"</span></div>
+            <div class="jl ji" style="padding-left:40px"><span class="jln">23</span><span class="js le">"DSA - Neetcode
+                150"</span><span class="jcm">, </span><span class="js le">"TypeScript (advanced)"</span></div>
+            <div class="jl ji"><span class="jln">24</span><span class="jco">]</span></div>
+            <div class="jl"><span class="jln">25</span><span class="jbr">}</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ ACHIEVEMENTS ══ -->
+  <section id="achievements">
+    <div class="c">
+      <div class="sl">05 - achievements</div>
+      <h2 class="st">achievements<span class="fa">[]</span></h2>
+      <div class="acg">
+        <div class="acard g rv"><span class="ai"><i class="fa-solid fa-trophy" style="color:var(--amber)"></i></span>
+          <div class="at2">1st Prize Winner</div>
+          <div class="as">StylePredict · Feb 2025</div>
+          <p class="adesc">Secured top position among 11 teams in the college competition for developing an ML-powered
+            sales prediction system. Recognized for technical depth and real-world applicability.</p>
+        </div>
+        <div class="acard cy rv"><span class="ai"><i class="fa-solid fa-bolt" style="color:var(--amber)"></i></span>
+          <div class="at2">2 Simultaneous Internships</div>
+          <div class="as">Sep–Dec 2025 · Both Remote</div>
+          <p class="adesc">Managed two part-time remote internships simultaneously - Fascave (MERN/frontend) and Raulo
+            (backend) - while in final year of B.E. Full delivery on both.</p>
+        </div>
+        <div class="acard rd rv"><span class="ai"><i class="fa-solid fa-robot" style="color:var(--cyan)"></i></span>
+          <div class="at2">AI in Production</div>
+          <div class="as">ExamMitra · Live Product</div>
+          <p class="adesc">Shipped a live product integrating LLaMA-70B, Groq API, OCR pipelines, and web scraping. Idea
+            to deployed product.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ EDUCATION ══ -->
+  <section id="education">
+    <div class="c">
+      <div class="sl">06 - education</div>
+      <h2 class="st">education<span class="fc">.path</span></h2>
+      <div class="etl">
+        <div class="eti rv">
+          <div class="etd top"></div>
+          <div class="edc">
+            <div class="edeg">Bachelor of Engineering - Information Technology</div>
+            <div class="einst">Shivajirao S. Jondhale College of Engineering, Dombivli</div>
+            <div class="emeta"><span class="eyr">2023 – 2026 (Expected)</span></div>
+          </div>
+        </div>
+        <div class="eti rv">
+          <div class="etd"></div>
+          <div class="edc">
+            <div class="edeg">Diploma in Computer Engineering</div>
+            <div class="einst">VPM's Polytechnic, Thane</div>
+            <div class="emeta"><span class="eyr">2020 – 2023</span><span class="esc">81%</span></div>
+          </div>
+        </div>
+        <div class="eti rv">
+          <div class="etd"></div>
+          <div class="edc">
+            <div class="edeg">10th SSC - Maharashtra Board</div>
+            <div class="einst">Shree Nagar Vidya Mandir, Thane</div>
+            <div class="emeta"><span class="eyr">2020</span><span class="esc">86%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ WRITING ══ -->
+  <section id="writing">
+    <div class="c">
+      <div class="sl">07 - writing</div>
+      <h2 class="st">thoughts<span class="fc">.log</span></h2>
+      <div class="wg">
+        <a href="https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7425194069313888256" target="_blank"
+          class="wc rv">
+          <div class="wts"><span class="wt">#backend</span><span class="wt">#databases</span><span
+              class="wt">#firstprinciples</span></div>
+          <div class="we">"You love Jets <i class=\"fa-solid fa-plane\" style=\"color:var(--cyan)\"></i>. But you
+            wouldn't fly one to the grocery store."</div>
+          <div class="wb">MongoDB was my default as a MERN dev - JSON everywhere, fast to prototype. But first
+            principles showed me SQL works better for 90% of use cases. Here's my new rulebook...</div>
+          <div class="wrm">Read on LinkedIn <span>→</span></div>
+        </a>
+        <a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7427319815176003584" target="_blank"
+          class="wc rv">
+          <div class="wts"><span class="wt">#systemdesign</span><span class="wt">#redis</span><span
+              class="wt">#backend</span></div>
+          <div class="we">"A great boundary catch isn't luck. It's positioning. Anticipation. Preparation."</div>
+          <div class="wb">My simple query takes 1 second. Amazon loads in milliseconds across massive datasets. The
+            reason? Caching. Performance is about designing smarter data flow...</div>
+          <div class="wrm">Read on LinkedIn <span>→</span></div>
+        </a>
+        <a href="https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7348772216265732100" target="_blank"
+          class="wc rv">
+          <div class="wts"><span class="wt">#buildinpublic</span><span class="wt">#AI</span><span
+              class="wt">#MERN</span></div>
+          <div class="we">"From PDFs to Answers - Meet ExamMitra: Your AI-Powered Exam Companion <i class=\"fa-solid
+              fa-rocket\" style=\"color:var(--cyan)\"></i>"</div>
+          <div class="wb">2 months of designing, coding, breaking, and rebuilding - ExamMitra is LIVE. LLaMA-70B, Groq
+            API, Puppeteer scraping, JWT auth, Railway + Vercel...</div>
+          <div class="wrm">Read on LinkedIn <span>→</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CONTACT ══ -->
+  <section id="contact">
+    <div class="c">
+      <div class="cti">
+        <div class="ce rv">connect();</div>
+        <h2 class="ch2 rv">Let's build<br><span class="ac2">something.</span></h2>
+        <p class="cs rv">Currently open to SDE-1, Full Stack, and Backend Engineering roles.<br>Based in Mumbai · Open
+          to remote.</p>
+        <div class="cdv"></div>
+        <div class="cls rv">
+          <div class="ci" onclick="copyTxt('dev.shaileshhawale@gmail.com',this)">
+            <div class="cil"><span class="cic">@</span><span class="cit">dev.shaileshhawale@gmail.com</span></div>
+            <div style="display:flex;align-items:center;gap:10px"><span class="cf">✓ copied</span><span
+                class="cia">click to copy</span></div>
+          </div>
+          <a href="https://linkedin.com/in/shailesh-hawale" target="_blank" class="ci">
+            <div class="cil"><span class="cic">in</span><span class="cit">linkedin.com/in/shailesh-hawale</span></div>
+            <span class="cia">open ↗</span>
+          </a>
+          <a href="https://github.com/HawaleShailesh004" target="_blank" class="ci">
+            <div class="cil"><span class="cic">⌥</span><span class="cit">github.com/HawaleShailesh004</span></div>
+            <span class="cia">open ↗</span>
+          </a>
+        </div>
+        <p class="cso rv">Or just say hi. I respond.</p>
+      </div>
+    </div>
+  </section>
+
+  </main>
+  <footer>
+    <div class="c">
+      <div class="fi">
+        <div class="fl">Designed &amp; built by <span>Shailesh Hawale</span> · 2026</div>
+        <ul class="flinks">
+          <li><a href="https://github.com/HawaleShailesh004" target="_blank">github</a></li>
+          <li><a href="https://linkedin.com/in/shailesh-hawale" target="_blank">linkedin</a></li>
+          <li>
+            <a href="https://mail.google.com/mail/?view=cm&to=dev.shaileshhawale@gmail.com&su=Opportunity%20from%20your%20portfolio&body=Hi%20Shailesh%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect.%0A%0A%5BYour%20message%5D"
+              target="_blank" rel="noopener noreferrer">
+              Hire me
+            </a>
+          </li>
+        </ul>
+        <div class="fbt">Built with <span>HTML · CSS · Vanilla JS</span> · Deployed on <span>Vercel</span></div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="index.js"></script>
+</body>
+
+</html>
