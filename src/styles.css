@@ -1814,6 +1814,244 @@ section {
   background: rgba(34, 197, 94, 0.05);
 }
 
+/* ══ DECRYPT TESTIMONIALS ══ */
+.decrypt-wrap {
+  margin-top: 20px;
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.decrypt-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.decrypt-file-label {
+  font-family: var(--fm);
+  font-size: 10px;
+  color: var(--t3);
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.decrypt-file-label .df-name {
+  color: var(--amber);
+}
+
+.decrypt-btn {
+  font-family: var(--fm);
+  font-size: 11px;
+  color: var(--cyan);
+  background: rgba(0, 212, 255, 0.06);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  padding: 5px 14px;
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s, border-color 0.2s, transform 0.1s;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.decrypt-btn:hover {
+  background: rgba(0, 212, 255, 0.1);
+  border-color: rgba(0, 212, 255, 0.4);
+}
+
+.decrypt-btn:active {
+  transform: scale(0.97);
+}
+
+.decrypt-btn.decrypting {
+  color: var(--amber);
+  border-color: rgba(245, 158, 11, 0.3);
+  background: rgba(245, 158, 11, 0.06);
+}
+
+.decrypt-btn.done {
+  color: #22c55e;
+  border-color: rgba(34, 197, 94, 0.3);
+  background: rgba(34, 197, 94, 0.06);
+}
+
+.decrypt-btn .btn-icon {
+  font-size: 12px;
+  transition: transform 0.3s;
+}
+
+.decrypt-btn.decrypting .btn-icon {
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.decrypt-review {
+  position: relative;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+
+.decrypt-review.active {
+  border-color: rgba(0, 212, 255, 0.15);
+}
+
+.decrypt-review-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: var(--bg3);
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.decrypt-reviewer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.decrypt-avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fd);
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--cyan);
+  flex-shrink: 0;
+}
+
+.decrypt-reviewer-name {
+  font-family: var(--fd);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--t1);
+}
+
+.decrypt-reviewer-role {
+  font-family: var(--fm);
+  font-size: 10px;
+  color: var(--t3);
+  margin-top: 1px;
+}
+
+.decrypt-status {
+  font-family: var(--fm);
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 2px;
+  letter-spacing: 0.05em;
+  transition: all 0.3s;
+}
+
+.decrypt-status.locked {
+  color: var(--red);
+  background: rgba(255, 77, 109, 0.06);
+  border: 1px solid rgba(255, 77, 109, 0.2);
+}
+
+.decrypt-status.decrypting {
+  color: var(--amber);
+  background: rgba(245, 158, 11, 0.06);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.decrypt-status.unlocked {
+  color: #22c55e;
+  background: rgba(34, 197, 94, 0.06);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.decrypt-review-body {
+  padding: 14px 16px;
+}
+
+.decrypt-text {
+  font-family: var(--fm);
+  font-size: 12.5px;
+  line-height: 1.9;
+  color: var(--red);
+  letter-spacing: 0.03em;
+  transition: color 0.3s;
+  word-break: break-word;
+}
+
+.decrypt-text.decrypting {
+  color: var(--amber);
+}
+
+.decrypt-text.unlocked {
+  color: var(--t2);
+  font-family: var(--fb);
+  font-size: 13px;
+  font-style: italic;
+  letter-spacing: 0;
+}
+
+.decrypt-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 10px;
+  min-height: 20px;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
+.decrypt-keywords.show {
+  opacity: 1;
+}
+
+.decrypt-keywords span {
+  font-family: var(--fm);
+  font-size: 9px;
+  color: var(--cyan);
+  background: rgba(0, 212, 255, 0.05);
+  border: 1px solid rgba(0, 212, 255, 0.12);
+  padding: 2px 7px;
+  border-radius: 2px;
+}
+
+.decrypt-review.decrypting-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--cyan), transparent);
+  opacity: 0.4;
+  animation: decrypt-scanline 0.8s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes decrypt-scanline {
+  0% { top: 0%; }
+  100% { top: 100%; }
+}
+
 /* ══ PROJECTS ══ */
 #projects {
   padding: 120px 0
