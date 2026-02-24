@@ -63,3 +63,15 @@ window.addEventListener('scroll', () => { const y = scrollY; b1 && (b1.style.tra
 // ACTIVE NAV
 const secs = document.querySelectorAll('section[id]'), nls = document.querySelectorAll('.nl a');
 window.addEventListener('scroll', () => { let cur = ''; secs.forEach(s => { if (scrollY >= s.offsetTop - 140) cur = s.id; }); nls.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + cur)); }, { passive: true });
+
+// ══ TESTIMONIAL TOGGLE ══
+function toggleTestimonial(btn) {
+  const body = btn.nextElementSibling;
+  const icon = btn.querySelector('.toggle-icon');
+  const isOpen = btn.classList.contains('open');
+
+  btn.classList.toggle('open', !isOpen);
+  body.classList.toggle('open', !isOpen);
+  btn.setAttribute('aria-expanded', String(!isOpen));
+  icon.textContent = isOpen ? '+' : '×';
+}
