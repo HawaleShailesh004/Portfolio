@@ -897,28 +897,95 @@
     <!-- ══ CONTACT ══ -->
     <section id="contact">
       <div class="c">
-        <div class="cti">
-          <div class="ce rv">connect();</div>
-          <h2 class="ch2 rv">Let's build<br><span class="ac2">something.</span></h2>
-          <p class="cs rv">Currently open to SDE-1, Full Stack, and Backend Engineering roles.<br>Based in Mumbai · Open
-            to remote.</p>
-          <div class="cdv"></div>
-          <div class="cls rv">
-            <div class="ci" onclick="copyTxt('dev.shaileshhawale@gmail.com',this)">
-              <div class="cil"><span class="cic">@</span><span class="cit">dev.shaileshhawale@gmail.com</span></div>
-              <div style="display:flex;align-items:center;gap:10px"><span class="cf">✓ copied</span><span
-                  class="cia">click to copy</span></div>
+        <div class="contact-grid">
+
+          <div class="contact-left rv">
+            <div class="sl">08 - contact</div>
+            <h2 class="contact-heading">
+              Let's build<br>
+              <span class="contact-heading-cyan">something</span>
+              <span class="contact-heading-dot">.</span>
+            </h2>
+            <p class="contact-sub">Currently open to SDE-1, Full Stack, and Backend Engineering roles.</p>
+
+            <div class="contact-status">
+              <div class="contact-status-dot"></div>
+              <span>Available · Mumbai · Open to remote</span>
             </div>
-            <a href="https://linkedin.com/in/shailesh-hawale" target="_blank" class="ci">
-              <div class="cil"><span class="cic">in</span><span class="cit">linkedin.com/in/shailesh-hawale</span></div>
-              <span class="cia">open ↗</span>
-            </a>
-            <a href="https://github.com/HawaleShailesh004" target="_blank" class="ci">
-              <div class="cil"><span class="cic">⌥</span><span class="cit">github.com/HawaleShailesh004</span></div>
-              <span class="cia">open ↗</span>
-            </a>
+
+            <div class="contact-terminal rv">
+              <div class="ct-line"><span class="ct-prompt">→</span> <span class="ct-cmd">whoami</span></div>
+              <div class="ct-out">shailesh_hawale</div>
+              <div class="ct-line"><span class="ct-prompt">→</span> <span class="ct-cmd">cat status.txt</span></div>
+              <div class="ct-out ct-green">actively_looking_for_sde1</div>
+              <div class="ct-line"><span class="ct-prompt">→</span> <span class="ct-cmd">echo $preferred_role</span></div>
+              <div class="ct-out">full_stack · backend · ai_integration</div>
+              <div class="ct-line"><span class="ct-prompt">→</span> <span class="ct-cmd">./hire_me.sh</span> <span class="ct-cursor"></span></div>
+            </div>
           </div>
-          <p class="cso rv">Or just say hi. I respond.</p>
+
+          <div class="contact-right rv">
+            <div class="contact-links">
+
+              <div class="contact-item" onclick="copyTxt('dev.shaileshhawale@gmail.com', this)">
+                <div class="contact-item-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="contact-item-body">
+                  <div class="contact-item-label">email</div>
+                  <div class="contact-item-val">dev.shaileshhawale@gmail.com</div>
+                </div>
+                <div class="contact-item-action">
+                  <span class="cf">✓ copied</span>
+                  <span class="contact-item-hint">click to copy</span>
+                </div>
+              </div>
+
+              <a href="https://linkedin.com/in/shailesh-hawale" target="_blank" class="contact-item">
+                <div class="contact-item-icon linkedin">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+                <div class="contact-item-body">
+                  <div class="contact-item-label">linkedin</div>
+                  <div class="contact-item-val">linkedin.com/in/shailesh-hawale</div>
+                </div>
+                <div class="contact-item-action">
+                  <span class="contact-item-hint">open ↗</span>
+                </div>
+              </a>
+
+              <a href="https://github.com/HawaleShailesh004" target="_blank" class="contact-item">
+                <div class="contact-item-icon github">
+                  <i class="fa-brands fa-github"></i>
+                </div>
+                <div class="contact-item-body">
+                  <div class="contact-item-label">github</div>
+                  <div class="contact-item-val">github.com/HawaleShailesh004</div>
+                </div>
+                <div class="contact-item-action">
+                  <span class="contact-item-hint">open ↗</span>
+                </div>
+              </a>
+
+              <a href="https://mail.google.com/mail/?view=cm&to=dev.shaileshhawale@gmail.com&su=Opportunity%20from%20your%20portfolio&body=Hi%20Shailesh%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect.%0A%0A%5BYour%20message%5D"
+                target="_blank" rel="noopener noreferrer" class="contact-item hire">
+                <div class="contact-item-icon hire-icon">
+                  <i class="fa-solid fa-paper-plane"></i>
+                </div>
+                <div class="contact-item-body">
+                  <div class="contact-item-label">ready to hire?</div>
+                  <div class="contact-item-val">send me an opportunity →</div>
+                </div>
+                <div class="contact-item-action">
+                  <span class="contact-item-hint">compose ↗</span>
+                </div>
+              </a>
+
+            </div>
+
+            <p class="contact-note">Or just say hi. I respond.</p>
+          </div>
+
         </div>
       </div>
     </section>
@@ -926,19 +993,37 @@
   </main>
   <footer>
     <div class="c">
-      <div class="fi">
-        <div class="fl">Designed &amp; built by <span>Shailesh Hawale</span> · 2026</div>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">SH</div>
+          <div>
+            <div class="footer-name">Shailesh Hawale</div>
+            <div class="footer-title">Full Stack Engineer · Mumbai</div>
+          </div>
+        </div>
+        <div class="footer-status">
+          <span class="footer-dot"></span>
+          Open to SDE-1 roles
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          Designed &amp; built by <span>Shailesh Hawale</span> · 2026
+        </div>
         <ul class="flinks">
           <li><a href="https://github.com/HawaleShailesh004" target="_blank">github</a></li>
           <li><a href="https://linkedin.com/in/shailesh-hawale" target="_blank">linkedin</a></li>
           <li>
             <a href="https://mail.google.com/mail/?view=cm&to=dev.shaileshhawale@gmail.com&su=Opportunity%20from%20your%20portfolio&body=Hi%20Shailesh%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect.%0A%0A%5BYour%20message%5D"
-              target="_blank" rel="noopener noreferrer">
-              Hire me
-            </a>
+              target="_blank" rel="noopener noreferrer">hire me</a>
           </li>
         </ul>
-        <div class="fbt">Built with <span>HTML · CSS · Vanilla JS</span> · Deployed on <span>Vercel</span></div>
+        <div class="footer-built">
+          Built with <span>HTML · CSS · Vanilla JS</span> · Deployed on <span>Vercel</span>
+        </div>
       </div>
     </div>
   </footer>

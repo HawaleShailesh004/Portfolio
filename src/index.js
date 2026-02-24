@@ -164,8 +164,8 @@ document.querySelectorAll("[data-count]").forEach((c) => co.observe(c));
 // COPY
 function copyTxt(text, el) {
   navigator.clipboard.writeText(text).then(() => {
-    const f = el.querySelector(".cf"),
-      a = el.querySelector(".cia");
+    const f = el.querySelector(".cf");
+    const a = el.querySelector(".cia") || el.querySelector(".contact-item-hint");
     if (f) {
       f.classList.add("show");
       if (a) a.style.opacity = "0";
@@ -431,4 +431,14 @@ function toggleDrawer(btn) {
   drawer.classList.toggle("open", !isOpen);
   btn.classList.toggle("open", !isOpen);
   btn.setAttribute("aria-expanded", String(!isOpen));
+
+  const company = drawerId.replace("drawer-", "");
+  if (!isOpen) {
+    setTimeout(() => decryptReviews(company), 400);
+  } else {
+    const decryptBtn = document.querySelector(`#decrypt-${company} .decrypt-btn`);
+    if (decryptBtn && decryptBtn.classList.contains("done")) {
+      decryptReviews(company);
+    }
+  }
 }
