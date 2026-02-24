@@ -15,6 +15,13 @@ fs.mkdirSync(dist, { recursive: true });
   fs.copyFileSync(path.join(src, file), path.join(dist, file));
 });
 
+// Copy src/assets (e.g. company logos) to dist/assets
+const srcAssets = path.join(src, 'assets');
+if (fs.existsSync(srcAssets)) {
+  fs.mkdirSync(path.join(dist, 'assets'), { recursive: true });
+  fs.cpSync(srcAssets, path.join(dist, 'assets'), { recursive: true });
+}
+
 // Copy public folder to dist/public
 if (fs.existsSync(publicDir)) {
   fs.cpSync(publicDir, path.join(dist, 'public'), { recursive: true });
