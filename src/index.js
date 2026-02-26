@@ -226,47 +226,34 @@ const REVIEWS = {
   fascave: [
     {
       id: "fascave-1",
-      text: "He was dedicated, delivered tasks on time, and demonstrated a good problem-solving approach. Proactive in learning and receptive to feedback — a dependable contributor to the team.",
+      text: "I mentored Shailesh during his internship and found him to have strong foundational knowledge of JavaScript and React. He was dedicated, delivered tasks on time, and demonstrated a good problem-solving approach. He was proactive in learning and receptive to feedback, making him a dependable contributor to the team.",
     },
     {
       id: "fascave-2",
-      text: "Delivers quality work, has a positive attitude, and is always open to feedback. His problem-solving approach and willingness to learn make him a valuable team member.",
+      text: "Shailesh has shown great dedication as a Frontend Developer Intern. He delivers quality work, has a positive attitude, and is always open to feedback. His problem-solving approach and willingness to learn make him a valuable team member.",
     },
   ],
   raulo: [
     {
       id: "raulo-1",
-      text: "Delivers quality work, has a positive attitude, and is always open to feedback. His problem-solving approach and willingness to learn make him a valuable team member.",
+      text: "Shailesh Hawale served as a Backend Intern at Raulo Enterprises, where he was responsible for managing our end-to-end backend operations. Shailesh consistently demonstrated an exceptional grasp of system architecture and problem-solving. Beyond his technical contributions, his dedication to the company has been exemplary, as he continues to support our projects post-internship. We highly recommend Shailesh for any advanced backend role, as he has proven himself to be a dedicated and capable developer.",
     },
   ],
 };
 
-// track running intervals so we can cancel them on re-encrypt
 const activeTimers = {};
 
 function scramble(text) {
-  return text
-    .split("")
-    .map((ch) =>
-      ch === " "
-        ? " "
-        : DECRYPT_CHARS[Math.floor(Math.random() * DECRYPT_CHARS.length)],
-    )
-    .join("");
+  return text.split("").map((ch) =>
+    ch === " " ? " " : DECRYPT_CHARS[Math.floor(Math.random() * DECRYPT_CHARS.length)]
+  ).join("");
 }
 
-// continuously re-scramble non-revealed chars so it looks alive
-function animateDecrypt(
-  el,
-  targetText,
-  statusEl,
-  keywordsEl,
-  cardEl,
-  staggerDelay,
-  onDone,
-) {
-  const totalDuration = 1600;
-  const steps = 32;
+function animateDecrypt(el, targetText, statusEl, keywordsEl, cardEl, staggerDelay, onDone) {
+  const baseDuration = 1400;
+  const maxDuration = 2200;
+  const totalDuration = Math.min(baseDuration + targetText.length * 1.8, maxDuration);
+  const steps = 36;
   const interval = totalDuration / steps;
   let step = 0;
   let cancelled = false;
@@ -279,10 +266,7 @@ function animateDecrypt(
     cardEl.classList.add("decrypting-active");
 
     const ticker = setInterval(() => {
-      if (cancelled) {
-        clearInterval(ticker);
-        return;
-      }
+      if (cancelled) { clearInterval(ticker); return; }
 
       step++;
       const progress = step / steps;
@@ -300,27 +284,23 @@ function animateDecrypt(
         statusEl.className = "decrypt-status unlocked";
         cardEl.classList.remove("decrypting-active");
         keywordsEl.classList.add("show");
+
+        const pullQuote = cardEl.querySelector(".decrypt-pull-quote");
+        if (pullQuote) {
+          pullQuote.classList.add("show");
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => pullQuote.classList.add("visible"));
+          });
+        }
+
         if (onDone) onDone();
       }
     }, interval);
 
-    // store ticker so re-encrypt can cancel it
-    activeTimers[el.id] = {
-      ticker,
-      cancel: () => {
-        cancelled = true;
-        clearInterval(ticker);
-      },
-    };
+    activeTimers[el.id] = { cancel: () => { cancelled = true; clearInterval(ticker); } };
   }, staggerDelay);
 
-  // store the stagger timeout too
-  activeTimers[el.id + "_delay"] = {
-    cancel: () => {
-      cancelled = true;
-      clearTimeout(timerId);
-    },
-  };
+  activeTimers[el.id + "_delay"] = { cancel: () => { cancelled = true; clearTimeout(timerId); } };
 }
 
 function decryptReviews(company) {
@@ -331,36 +311,35 @@ function decryptReviews(company) {
   const isDecrypting = btn.classList.contains("decrypting");
   const isDone = btn.classList.contains("done");
 
-  // ── RE-ENCRYPT ──
   if (isDone) {
-    // cancel any lingering timers
     reviews.forEach((r) => {
       const el = document.getElementById(`dt-${r.id}`);
-      if (activeTimers[el.id]) activeTimers[el.id].cancel();
-      if (activeTimers[el.id + "_delay"])
-        activeTimers[el.id + "_delay"].cancel();
+      if (el && activeTimers[el.id]) activeTimers[el.id].cancel();
+      if (el && activeTimers[el.id + "_delay"]) activeTimers[el.id + "_delay"].cancel();
     });
 
-    // reset button
     btn.classList.remove("done", "decrypting");
     btn.querySelector(".btn-icon").textContent = "⚷";
     btn.querySelector(".btn-text").textContent = "decrypt_review.sh";
 
-    // reset each card back to scrambled state
     reviews.forEach((r) => {
       const textEl = document.getElementById(`dt-${r.id}`);
       const statusEl = document.getElementById(`ds-${r.id}`);
       const kwEl = document.getElementById(`dk-${r.id}`);
       const cardEl = document.getElementById(`dr-${r.id}`);
 
-      // scramble text again with a rolling animation so it feels like encryption
+      const pullQuote = cardEl.querySelector(".decrypt-pull-quote");
+      if (pullQuote) {
+        pullQuote.classList.remove("visible");
+        setTimeout(() => pullQuote.classList.remove("show"), 300);
+      }
+
       let reEncryptSteps = 0;
       const reEncryptTotal = 18;
       const reEncryptInterval = setInterval(() => {
         reEncryptSteps++;
         const progress = reEncryptSteps / reEncryptTotal;
         const lockUpTo = Math.floor(progress * r.text.length);
-        // revealed part shrinks, scrambled part grows
         const stillVisible = r.text.slice(0, r.text.length - lockUpTo);
         const nowScrambled = scramble(r.text.slice(r.text.length - lockUpTo));
         textEl.textContent = stillVisible + nowScrambled;
@@ -369,7 +348,7 @@ function decryptReviews(company) {
         if (reEncryptSteps >= reEncryptTotal) {
           clearInterval(reEncryptInterval);
           textEl.textContent = scramble(r.text);
-          textEl.className = "decrypt-text"; // back to red scrambled
+          textEl.className = "decrypt-text";
           statusEl.textContent = "⚿ locked";
           statusEl.className = "decrypt-status locked";
           kwEl.classList.remove("show");
@@ -377,14 +356,11 @@ function decryptReviews(company) {
         }
       }, 40);
     });
-
     return;
   }
 
-  // ignore if mid-decrypt
   if (isDecrypting) return;
 
-  // ── DECRYPT ──
   btn.classList.add("decrypting");
   btn.querySelector(".btn-icon").textContent = "◌";
   btn.querySelector(".btn-text").textContent = "decrypting...";
@@ -405,13 +381,12 @@ function decryptReviews(company) {
         btn.classList.remove("decrypting");
         btn.classList.add("done");
         btn.querySelector(".btn-icon").textContent = "↺";
-        btn.querySelector(".btn-text").textContent = "re-encrypt";
+        btn.querySelector(".btn-text").textContent = "reset";
       }
     });
   });
 }
 
-// show scrambled text on page load so it always looks encrypted by default
 document.addEventListener("DOMContentLoaded", () => {
   Object.values(REVIEWS).forEach((reviews) => {
     reviews.forEach((r) => {

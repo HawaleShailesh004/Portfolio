@@ -1817,9 +1817,7 @@ section {
 
 /* ══ DECRYPT TESTIMONIALS ══ */
 .decrypt-wrap {
-  margin-top: 20px;
-  border-top: 1px solid var(--border);
-  padding-top: 20px;
+  padding-top: 4px;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -1851,22 +1849,22 @@ section {
   font-family: var(--fm);
   font-size: 11px;
   color: var(--cyan);
-  background: rgba(0, 212, 255, 0.06);
-  border: 1px solid rgba(0, 212, 255, 0.2);
+  background: rgba(0,212,255,0.06);
+  border: 1px solid rgba(0,212,255,0.2);
   padding: 5px 14px;
   border-radius: 2px;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 8px;
-  transition: background 0.2s, border-color 0.2s, transform 0.1s;
+  transition: background 0.2s, border-color 0.2s, transform 0.1s, opacity 0.2s;
   letter-spacing: 0.06em;
   white-space: nowrap;
 }
 
 .decrypt-btn:hover {
-  background: rgba(0, 212, 255, 0.1);
-  border-color: rgba(0, 212, 255, 0.4);
+  background: rgba(0,212,255,0.1);
+  border-color: rgba(0,212,255,0.4);
 }
 
 .decrypt-btn:active {
@@ -1875,14 +1873,26 @@ section {
 
 .decrypt-btn.decrypting {
   color: var(--amber);
-  border-color: rgba(245, 158, 11, 0.3);
-  background: rgba(245, 158, 11, 0.06);
+  border-color: rgba(245,158,11,0.3);
+  background: rgba(245,158,11,0.06);
+  pointer-events: none;
 }
 
+/* done state — shrink to a small reset icon, flush right */
 .decrypt-btn.done {
-  color: #22c55e;
-  border-color: rgba(34, 197, 94, 0.3);
-  background: rgba(34, 197, 94, 0.06);
+  color: var(--t3);
+  border-color: transparent;
+  background: transparent;
+  padding: 5px 8px;
+  font-size: 10px;
+  opacity: 0.5;
+}
+
+.decrypt-btn.done:hover {
+  opacity: 1;
+  color: var(--t2);
+  background: rgba(255,255,255,0.04);
+  border-color: var(--border);
 }
 
 .decrypt-btn .btn-icon {
@@ -1895,11 +1905,10 @@ section {
 }
 
 @keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+  to { transform: rotate(360deg); }
 }
 
+/* ── review card ── */
 .decrypt-review {
   position: relative;
   background: var(--bg2);
@@ -1910,7 +1919,16 @@ section {
 }
 
 .decrypt-review.active {
-  border-color: rgba(0, 212, 255, 0.15);
+  border-color: rgba(0,212,255,0.15);
+}
+
+/* founder card — amber accent */
+.decrypt-review.founder-card {
+  border-color: rgba(245,158,11,0.12);
+}
+
+.decrypt-review.founder-card.active {
+  border-color: rgba(245,158,11,0.25);
 }
 
 .decrypt-review-top {
@@ -1930,12 +1948,13 @@ section {
   gap: 10px;
 }
 
+/* avatar with initials fallback */
 .decrypt-avatar {
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  background: var(--bg3);
-  /* border: 1px solid rgba(0, 212, 255, 0.2); */
+  background: rgba(0,212,255,0.08);
+  border: 1px solid rgba(0,212,255,0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1945,15 +1964,43 @@ section {
   color: var(--cyan);
   flex-shrink: 0;
   overflow: hidden;
-  box-shadow: 0px 0px 5px rgba(0, 212, 255, 0.4);
+  position: relative;
+}
+
+.decrypt-review.founder-card .decrypt-avatar {
+  background: rgba(245,158,11,0.08);
+  border-color: rgba(245,158,11,0.25);
+  color: var(--amber);
 }
 
 .decrypt-avatar img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
   border-radius: 50%;
-  box-shadow: 10px 10px 24px rgba(0, 212, 255, 0.4);
+  display: none; /* hidden by default, shown if loaded */
+}
+
+.decrypt-avatar img.loaded {
+  display: block;
+}
+
+.decrypt-avatar img.loaded + .decrypt-avatar-initials {
+  display: none;
+}
+
+.decrypt-avatar-initials {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fd);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
 }
 
 .decrypt-reviewer-name {
@@ -1970,6 +2017,19 @@ section {
   margin-top: 1px;
 }
 
+/* founder badge */
+.decrypt-founder-badge {
+  font-family: var(--fm);
+  font-size: 9px;
+  color: var(--amber);
+  background: rgba(245,158,11,0.08);
+  border: 1px solid rgba(245,158,11,0.2);
+  padding: 2px 7px;
+  border-radius: 2px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 .decrypt-status {
   font-family: var(--fm);
   font-size: 10px;
@@ -1981,24 +2041,51 @@ section {
 
 .decrypt-status.locked {
   color: var(--red);
-  background: rgba(255, 77, 109, 0.06);
-  border: 1px solid rgba(255, 77, 109, 0.2);
+  background: rgba(255,77,109,0.06);
+  border: 1px solid rgba(255,77,109,0.2);
 }
 
 .decrypt-status.decrypting {
   color: var(--amber);
-  background: rgba(245, 158, 11, 0.06);
-  border: 1px solid rgba(245, 158, 11, 0.2);
+  background: rgba(245,158,11,0.06);
+  border: 1px solid rgba(245,158,11,0.2);
 }
 
 .decrypt-status.unlocked {
   color: #22c55e;
-  background: rgba(34, 197, 94, 0.06);
-  border: 1px solid rgba(34, 197, 94, 0.2);
+  background: rgba(34,197,94,0.06);
+  border: 1px solid rgba(34,197,94,0.2);
 }
 
 .decrypt-review-body {
   padding: 14px 16px;
+}
+
+/* pull quote — shown after decrypt on founder card */
+.decrypt-pull-quote {
+  display: none;
+  font-family: var(--fd);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--amber);
+  border-left: 2px solid var(--amber);
+  padding: 8px 14px;
+  margin-bottom: 12px;
+  background: rgba(245,158,11,0.04);
+  border-radius: 0 4px 4px 0;
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.4s ease 0.2s, transform 0.4s ease 0.2s;
+}
+
+.decrypt-pull-quote.show {
+  display: block;
+}
+
+.decrypt-pull-quote.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .decrypt-text {
@@ -2021,16 +2108,18 @@ section {
   font-size: 13px;
   font-style: italic;
   letter-spacing: 0;
+  line-height: 1.8;
 }
 
+/* keywords */
 .decrypt-keywords {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
   margin-top: 10px;
   min-height: 20px;
-  transition: opacity 0.5s;
   opacity: 0;
+  transition: opacity 0.5s ease 0.3s;
 }
 
 .decrypt-keywords.show {
@@ -2041,17 +2130,24 @@ section {
   font-family: var(--fm);
   font-size: 9px;
   color: var(--cyan);
-  background: rgba(0, 212, 255, 0.05);
-  border: 1px solid rgba(0, 212, 255, 0.12);
+  background: rgba(0,212,255,0.05);
+  border: 1px solid rgba(0,212,255,0.12);
   padding: 2px 7px;
   border-radius: 2px;
 }
 
+/* founder card keywords — amber tint */
+.decrypt-review.founder-card .decrypt-keywords span {
+  color: var(--amber);
+  background: rgba(245,158,11,0.05);
+  border-color: rgba(245,158,11,0.15);
+}
+
+/* scanline during decrypt */
 .decrypt-review.decrypting-active::after {
   content: '';
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 0; right: 0;
   top: 0;
   height: 2px;
   background: linear-gradient(to right, transparent, var(--cyan), transparent);
@@ -2060,14 +2156,13 @@ section {
   pointer-events: none;
 }
 
-@keyframes decrypt-scanline {
-  0% {
-    top: 0%;
-  }
+.decrypt-review.founder-card.decrypting-active::after {
+  background: linear-gradient(to right, transparent, var(--amber), transparent);
+}
 
-  100% {
-    top: 100%;
-  }
+@keyframes decrypt-scanline {
+  0%   { top: 0%; }
+  100% { top: 100%; }
 }
 
 /* ══ PROJECTS ══ */

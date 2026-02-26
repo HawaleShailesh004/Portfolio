@@ -347,7 +347,12 @@
               <div class="decrypt-review" id="dr-fascave-1">
                 <div class="decrypt-review-top">
                   <div class="decrypt-reviewer">
-                    <div class="decrypt-avatar"><img src="assets/fascave-logo.png" alt="Fascave IT Solutions" /></div>
+                    <div class="decrypt-avatar" data-initials="FA">
+                      <img src="assets/fascave-logo.png" alt="Fascave IT Solutions"
+                           onload="this.classList.add('loaded')"
+                           onerror="this.style.display='none'" />
+                      <span class="decrypt-avatar-initials">FA</span>
+                    </div>
                     <div>
                       <div class="decrypt-reviewer-name">Mentor</div>
                       <div class="decrypt-reviewer-role">Fascave IT Solutions</div>
@@ -358,7 +363,7 @@
                 <div class="decrypt-review-body">
                   <div class="decrypt-text" id="dt-fascave-1"></div>
                   <div class="decrypt-keywords" id="dk-fascave-1">
-                    <span>dedicated</span><span>proactive</span><span>dependable</span>
+                    <span>delivered on time</span><span>proactive learner</span><span>dependable</span><span>receptive to feedback</span>
                   </div>
                 </div>
               </div>
@@ -366,7 +371,12 @@
               <div class="decrypt-review" id="dr-fascave-2">
                 <div class="decrypt-review-top">
                   <div class="decrypt-reviewer">
-                    <div class="decrypt-avatar"><img src="assets/fascave-logo.png" alt="Fascave IT Solutions" /></div>
+                    <div class="decrypt-avatar" data-initials="FA">
+                      <img src="assets/fascave-logo.png" alt="Fascave IT Solutions"
+                           onload="this.classList.add('loaded')"
+                           onerror="this.style.display='none'" />
+                      <span class="decrypt-avatar-initials">FA</span>
+                    </div>
                     <div>
                       <div class="decrypt-reviewer-name">Team Lead</div>
                       <div class="decrypt-reviewer-role">Fascave IT Solutions</div>
@@ -377,7 +387,7 @@
                 <div class="decrypt-review-body">
                   <div class="decrypt-text" id="dt-fascave-2"></div>
                   <div class="decrypt-keywords" id="dk-fascave-2">
-                    <span>quality work</span><span>positive attitude</span><span>valuable</span>
+                    <span>quality work</span><span>positive attitude</span><span>valuable team member</span><span>willingness to learn</span>
                   </div>
                 </div>
               </div>
@@ -441,21 +451,32 @@
                 </button>
               </div>
 
-              <div class="decrypt-review" id="dr-raulo-1">
+              <div class="decrypt-review founder-card" id="dr-raulo-1">
                 <div class="decrypt-review-top">
                   <div class="decrypt-reviewer">
-                    <div class="decrypt-avatar"><img src="assets/raulo-logo.png" alt="Raulo Enterprises" /></div>
+                    <div class="decrypt-avatar" data-initials="RA">
+                      <img src="assets/raulo-logo.png" alt="Raulo Enterprises"
+                           onload="this.classList.add('loaded')"
+                           onerror="this.style.display='none'" />
+                      <span class="decrypt-avatar-initials">RA</span>
+                    </div>
                     <div>
                       <div class="decrypt-reviewer-name">Founder</div>
                       <div class="decrypt-reviewer-role">Raulo Enterprises</div>
                     </div>
                   </div>
-                  <span class="decrypt-status locked" id="ds-raulo-1">⚿ locked</span>
+                  <div style="display:flex;align-items:center;gap:8px;">
+                    <span class="decrypt-founder-badge">founder rec.</span>
+                    <span class="decrypt-status locked" id="ds-raulo-1">⚿ locked</span>
+                  </div>
                 </div>
                 <div class="decrypt-review-body">
+                  <div class="decrypt-pull-quote" id="dpq-raulo-1">
+                    "Highly recommend for any advanced backend role — continues to support our projects post-internship."
+                  </div>
                   <div class="decrypt-text" id="dt-raulo-1"></div>
                   <div class="decrypt-keywords" id="dk-raulo-1">
-                    <span>dedicated</span><span>problem-solver</span><span>team player</span>
+                    <span>system architecture</span><span>post-internship support</span><span>highly recommended</span><span>exceptional grasp</span>
                   </div>
                 </div>
               </div>
